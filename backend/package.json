@@ -8,7 +8,7 @@
   "scripts": {
     "db:migrate": "npx prisma migrate dev",
     "db:deploy": "npx prisma migrate deploy",
-    "app:dev:start": "docker compose rm database -s -f -v && docker compose up -d && sleep 2 && yarn run db:deploy && yarn run start:dev",
+    "app:dev:start": "yarn run db:deploy && yarn run start:dev",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
