@@ -2,10 +2,6 @@ import { Controller, Get, Post, UseGuards } from '@nestjs/common';
 import { User } from '@prisma/client';
 import { GetUser } from 'src/auth/decorator';
 import { JwtGuard } from 'src/auth/guard';
-<<<<<<< HEAD
-=======
-import { PrismaService } from 'src/prisma/prisma.service';
->>>>>>> 0d49012 (feature(wallet): function add)
 import { WalletService } from './wallet.service';
 
 @UseGuards(JwtGuard)

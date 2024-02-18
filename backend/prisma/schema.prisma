@@ -30,13 +30,8 @@ model User {
 
 model Wallet {
   id          Int      @id @default(autoincrement())
-<<<<<<< HEAD
   balance     Float?
   yield       Float?
-=======
-  balance     Float
-  yield       Float
->>>>>>> 0d49012 (feature(wallet): function add)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   
@@ -44,11 +39,8 @@ model Wallet {
   userId      Int @unique
 
   assets      Asset[]
-<<<<<<< HEAD
 
   @@map("wallet")
-=======
->>>>>>> 0d49012 (feature(wallet): function add)
 }
 
 // Define the Asset model
@@ -56,20 +48,12 @@ model Asset {
   id            Int      @id @default(autoincrement())
   name          String
   symbol        String
-<<<<<<< HEAD
   value         Float
-=======
->>>>>>> 0d49012 (feature(wallet): function add)
   quantity      Float
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 
-<<<<<<< HEAD
   wallets        Wallet[]
 
   @@map("asset")
-=======
-  wallet        Wallet   @relation(fields: [walletId], references: [id])
-  walletId      Int
->>>>>>> 0d49012 (feature(wallet): function add)
 }
