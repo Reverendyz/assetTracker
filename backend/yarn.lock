@@ -840,43 +840,6 @@
   resolved "https://registry.npmjs.org/@prisma/client/-/client-5.7.1.tgz"
   integrity sha512-TUSa4nUcC4nf/e7X3jyO1pEd6XcI/TLRCA0KjkA46RDIpxUaRsBYEOqITwXRW2c0bMFyKcCRXrH4f7h4q9oOlg==
 
-<<<<<<< HEAD
-"@prisma/debug@5.9.0":
-  version "5.9.0"
-  resolved "https://registry.npmjs.org/@prisma/debug/-/debug-5.9.0.tgz"
-  integrity sha512-3Uhj5YSPqaIfzJQ6JQzCNBXeBTy0x803fGIoo2tvP/KIEd+o4o49JxCQtKtP8aeef5iNh5Nn9Z25wDrdLjS80A==
-
-"@prisma/engines-version@5.9.0-32.23fdc5965b1e05fc54e5f26ed3de66776b93de64":
-  version "5.9.0-32.23fdc5965b1e05fc54e5f26ed3de66776b93de64"
-  resolved "https://registry.npmjs.org/@prisma/engines-version/-/engines-version-5.9.0-32.23fdc5965b1e05fc54e5f26ed3de66776b93de64.tgz"
-  integrity sha512-HFl7275yF0FWbdcNvcSRbbu9JCBSLMcurYwvWc8WGDnpu7APxQo2ONtZrUggU3WxLxUJ2uBX+0GOFIcJeVeOOQ==
-
-"@prisma/engines@5.9.0":
-  version "5.9.0"
-  resolved "https://registry.npmjs.org/@prisma/engines/-/engines-5.9.0.tgz"
-  integrity sha512-BH1fpXbMH09TwfZH5FVMJwRp6afEhKzqwebbCLdaEkJDuhxA//iwbILLqGFtGTgZbdBNUOThIK+UC3++5kWMTg==
-  dependencies:
-    "@prisma/debug" "5.9.0"
-    "@prisma/engines-version" "5.9.0-32.23fdc5965b1e05fc54e5f26ed3de66776b93de64"
-    "@prisma/fetch-engine" "5.9.0"
-    "@prisma/get-platform" "5.9.0"
-
-"@prisma/fetch-engine@5.9.0":
-  version "5.9.0"
-  resolved "https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-5.9.0.tgz"
-  integrity sha512-NL8Vm8Vl2d6NOSkkPGN5TTTz4s6cyCleXOzqtOFWzfKFJ4wtN2Shu7llOT+ykf6nDzh1lCN2JHUt1S6FGFZGig==
-  dependencies:
-    "@prisma/debug" "5.9.0"
-    "@prisma/engines-version" "5.9.0-32.23fdc5965b1e05fc54e5f26ed3de66776b93de64"
-    "@prisma/get-platform" "5.9.0"
-
-"@prisma/get-platform@5.9.0":
-  version "5.9.0"
-  resolved "https://registry.npmjs.org/@prisma/get-platform/-/get-platform-5.9.0.tgz"
-  integrity sha512-8CatX+E6eZxcOjJZe5hF8EXxdb5GsQTA/u7pdmUJSxGLacW9K3r5vDdgV8s22PubObQQ6979/rkCMItbCrG4Yg==
-  dependencies:
-    "@prisma/debug" "5.9.0"
-=======
 "@prisma/debug@5.8.1":
   version "5.8.1"
   resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-5.8.1.tgz#704daa36919b0fc4d227260ecebfa1c94b155b07"
@@ -912,7 +875,6 @@
   integrity sha512-wnA+6HTFcY+tkykMokix9GiAkaauPC5W/gg0O5JB0J8tCTNWrqpnQ7AsaGRfkYUbeOIioh6woDjQrGTTRf1Zag==
   dependencies:
     "@prisma/debug" "5.8.1"
->>>>>>> 0d49012 (feature(wallet): function add)
 
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
@@ -4286,11 +4248,7 @@ passport-strategy@1.x.x, passport-strategy@^1.0.0:
   resolved "https://registry.npmjs.org/passport-strategy/-/passport-strategy-1.0.0.tgz"
   integrity sha512-CB97UUvDKJde2V0KDWWB3lyf6PC3FaZP7YxZ2G8OAtn9p4HI9j9JLP9qjOGZFvyl8uwNT8qM+hGnz/n16NI7oA==
 
-<<<<<<< HEAD
-"passport@^0.4.0 || ^0.5.0 || ^0.6.0 || ^0.7.0", passport@^0.7.0:
-=======
 passport@^0.7.0:
->>>>>>> 0d49012 (feature(wallet): function add)
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/passport/-/passport-0.7.0.tgz#3688415a59a48cf8068417a8a8092d4492ca3a05"
   integrity sha512-cPLl+qZpSc+ireUvt+IzqbED1cHHkDoVYMo30jbJIdOOjQ1MQYZBPiNvmi8UM6lJuOpTPXJGZQk0DtC4y61MYQ==
@@ -4400,21 +4358,12 @@ pretty-format@^29.0.0, pretty-format@^29.7.0:
     ansi-styles "^5.0.0"
     react-is "^18.0.0"
 
-<<<<<<< HEAD
-prisma@*, prisma@^5.8.1:
-  version "5.9.0"
-  resolved "https://registry.npmjs.org/prisma/-/prisma-5.9.0.tgz"
-  integrity sha512-0UcOofjNuAnd227JMaPqZvP01dsUXw9EXB9iC8fyoZtfv7zkQ0ozxyjY1g+vcjFPOnNLICMnLHx+lM5BJZYqOQ==
-  dependencies:
-    "@prisma/engines" "5.9.0"
-=======
 prisma@^5.8.1:
   version "5.8.1"
   resolved "https://registry.yarnpkg.com/prisma/-/prisma-5.8.1.tgz#1f101793a8831c0719dfbed5f85a96ea4888c9d3"
   integrity sha512-N6CpjzECnUHZ5beeYpDzkt2rYpEdAeqXX2dweu6BoQaeYkNZrC/WJHM+5MO/uidFHTak8QhkPKBWck1o/4MD4A==
   dependencies:
     "@prisma/engines" "5.8.1"
->>>>>>> 0d49012 (feature(wallet): function add)
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
