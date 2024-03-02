@@ -1,14 +1,10 @@
-FROM node:20.11.1-alpine3.19
-
-ARG PORT
-
-ENV PORT=${PORT}
+FROM node:20.11-alpine as builder
 
 WORKDIR /backend
 
-COPY . /backend/
+COPY backend/ .
 
-RUN apk add --no-cache bash curl && \
-    yarn install
+RUN apk update && apk add --no-cache bash curl && \
+  yarn install
 
 ENTRYPOINT [ "./entrypoint.sh"]

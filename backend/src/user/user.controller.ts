@@ -7,7 +7,7 @@ import { JwtGuard } from 'src/auth/guard';
 @Controller('user')
 export class UserController {
     @Get('me')
-    getUser(@GetUser() user: User){
-        return user;
-    }
+  getUser(@GetUser() user: User){
+    return user;
+  }
 }

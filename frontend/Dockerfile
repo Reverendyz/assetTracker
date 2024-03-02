@@ -1,16 +1,12 @@
-FROM node:20.11.1-alpine3.19
-
-ARG PORT
-
-ENV PORT=${PORT}
+FROM node:20.11-alpine
 
 WORKDIR /app
 
-COPY . /app/
+COPY frontend/ .
 
-RUN apk add --no-cache bash curl && \
-    yarn install
+RUN apk update && apk add --no-cache bash curl \
+  && yarn install \
+  && yarn global add @vue/cli \
+  && vue --version
 
-EXPOSE ${PORT}
-
-ENTRYPOINT [ "yarn", "serve" ]
+ENTRYPOINT [ "yarn", "run", "serve" ]
