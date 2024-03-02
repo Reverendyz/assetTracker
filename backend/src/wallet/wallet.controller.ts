@@ -7,17 +7,15 @@ import { WalletService } from './wallet.service';
 @UseGuards(JwtGuard)
 @Controller('wallet')
 export class WalletController {
-    constructor(
-        private walletService: WalletService
-    ){}
+  constructor(private walletService: WalletService) {}
 
-    @Get('my-wallet')
-    getMyWallet(@GetUser() user: User){
-        return this.walletService.getMyWallet(user);
-    }
+  @Get('my-wallet')
+  getMyWallet(@GetUser() user: User) {
+    return this.walletService.getMyWallet(user);
+  }
 
-    @Post('create')
-    createWallet(@GetUser() user: User){
-        return this.walletService.createWallet(user);
-    }
+  @Post('create')
+  createWallet(@GetUser() user: User) {
+    return this.walletService.createWallet(user);
+  }
 }

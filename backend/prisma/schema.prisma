@@ -45,11 +45,11 @@ model Wallet {
 
 // Define the Asset model
 model Asset {
-  id            Int      @id @default(autoincrement())
-  name          String
-  symbol        String
+  symbol        String      @id
+  name          String?
   value         Float
   quantity      Float
+  averagePrice  Float
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 
