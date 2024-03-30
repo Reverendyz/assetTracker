@@ -13,30 +13,21 @@
 
 <script lang='ts' setup>
 import { onBeforeMount, computed } from 'vue';
-import { useStore } from './store/store';
-import { MutationTypes } from './store/mutation-types';
-  
+import { useStore } from 'vuex';
+
 const store = useStore();
 const isLogged = computed(() => {
-  return store.getters.isLogged;
+  return store.getters['auth/isLogged'];
 });
 
 onBeforeMount(() => {
   const token = sessionStorage.getItem('token');
 
   if (token) {
-    const endpoint = '/auth/validate';
-    fetch(process.env.VUE_APP_API_URL + endpoint, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    }).then(response => {
-      if (response.ok) {
-        store.commit(MutationTypes.SET_LOGGED, true);
-      } else {
-        localStorage.removeItem('token');
-      }
+    store.dispatch('auth/validate').then(() => {
+      store.commit('auth/setLogged', true);
+    }).catch(() => {
+      sessionStorage.removeItem('token');
     });
   }
 });
