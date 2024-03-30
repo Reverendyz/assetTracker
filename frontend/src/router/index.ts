@@ -47,7 +47,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const token = sessionStorage.getItem('access_token');
+  const token = sessionStorage.getItem('token');
   if (token) {
     const endpoint = '/auth/validate';
     fetch(process.env.VUE_APP_API_URL + endpoint, {

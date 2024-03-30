@@ -11,40 +11,31 @@
 </template>
 
 <script lang='ts' setup>
-import { MutationTypes } from '@/store/mutation-types';
-import { useStore } from '@/store/store';
+import { useStore } from 'vuex';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { ActionTypes } from '../store/action-types';
 
 const formData = ref({
   email: '',
   password: '',
 });
 
+
 const router = useRouter();
 const store = useStore();
 
 async function signIn() {
   try {
-    const endpoint = '/auth/signin';
-    await fetch(process.env.VUE_APP_API_URL + endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'Application/json',
-      },
-      body: JSON.stringify(formData.value),
-    }).then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    }).then(data => {
-      sessionStorage.setItem('token', data.access_token);
-      store.commit(MutationTypes.SET_LOGGED, true);
+    store.dispatch(
+      'auth/signin',
+      formData.value,
+    ).then(data => {
       router.push({
         path: '/wallet',
         name: 'wallet',
       });
+      store.commit('auth/setLogged', true);
     }).catch(error => {
       console.error('Error posting data:', error);
     });

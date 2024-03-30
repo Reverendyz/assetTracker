@@ -32,22 +32,12 @@ export default defineComponent({
   },
   methods: {
     async signUp() {
-      const endpoint = '/auth/signup';
-      await fetch(`${process.env.VUE_APP_API_URL}${endpoint}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(this.formData)
-      }).then(
-        response => response.json()
-      ).then(
-        data => {
-          console.log('Response from server:', data);
-        })
-        .catch(error => {
-          console.error('Error posting data:', error);
-        });
+      this.$store.dispatch('auth/signup', this.formData).then((data: any) => {
+        console.log('Response from server:', data);
+      })
+      .catch((error: any) => {
+        console.error('Error posting data:', error);
+      });
     }
   }
 });

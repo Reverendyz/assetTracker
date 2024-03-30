@@ -3,14 +3,13 @@
 </template>
 
 <script lang='ts'>
-import { MutationTypes } from '@/store/mutation-types';
-import { useStore } from '@/store/store';
+import { useStore } from 'vuex';
 import { useRouter } from 'vue-router';
 export default {
   mounted() {
     const router = useRouter();
     const store = useStore();
-    store.commit(MutationTypes.SET_LOGGED, false);
+    store.commit('auth/setLogged', false);
     sessionStorage.removeItem('token');
     router.push({
       path: '/',
